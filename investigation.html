@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="js_dropdown.js"></script> 
+<script src="navbar_shrink.js"></script> 
+<link rel="stylesheet" href="css_dropdown.css" />
+<title>Investigation and Plan</title>   
+<link rel="icon" href="favicon_green.png">
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+
+
+</head>
+<body>
+
+<div id="myNav" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <div class="overlay-content">
+    <a href="index.html">Home page</a>
+    <a href="brief.html">Meeting the Brief</a>
+    <a href="investigation.html">Investigation and Plan</a>
+    <a href="design.html">Design</a>
+    <a href="implementation.html">Implementation</a>
+    <a href="testing.html">Testing</a>
+    <a href="evaluation.html">Evaluation</a>
+    <a href="references.html">References</a>
+    <a href="wordcount.html">Summary Word Count</a>
+  </div>
+</div>
+
+<br>
+
+
+<body>
+
+  <header>
+    <center>
+        <div id="navbar">
+    
+            <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Navigation Drop Down</span>
+        </div>
+    </center>
+  </header>
+    
+    
+    <style>
+    #navbar {
+      overflow: hidden;
+      background-color: #f1f1f173;
+      padding: 90px 10px; /* Large padding which will shrink on scroll (using JS) */
+      transition: 0.4s; /* Adds a transition effect when the padding is decreased */
+      position: fixed; /* Sticky/fixed navbar */
+      width: 100%;
+      top: 0; /* At the top */
+      z-index: 99;
+      text-shadow: 2px 2px #000000;
+    }
+    
+    </style>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<button class="increase btn btn-1 btn-sep icon-info">Increase Font Size</button>
+<button class="decrease btn btn-2 btn-sep icon-info">Decrease Font Size</button>
+
+
+    <div style="margin-top:210px;padding:15px 15px 2500px;background-color: #83a380ec;border: 5px solid gray;color: white;">
+
+      <div style = "float: right; padding: 160px 10px 10px 10px;">
+        <img src="Anaylsis of brief.JPG"
+        style="object-fit:cover;
+          width: 50%;
+          height:50%;
+          border: solid 5px gray">
+      </div>
+
+
+    
+          <br>
+          <br>
+          <br>
+          <br>
+          <span class="title"> Investigation and Plan </span>
+          <span class="text">
+            <br>
+            <p>I began the investigation and plan stage by highlighting important aspects of the brief so I can be sure to hit all of the specifications outlined.</p>
+            <p>After this I began my brainstorming and arrived on 3 ideas: Wordle, Rock Paper Scissors, and Black Jack.</p>
+            <p>My initial thoughts and ideas are outlined below. </p>
+
+          </span>
+          <div style = "float: center; padding: 10px 10px 10px 10px;">
+            <img src="Anaylsis.JPG"
+            style="object-fit:cover;
+              width: 100%;
+              height:100%;
+              border: solid 5px gray">
+          </div>
+  
+          
+            
+        
+          <br>
+          <br>
+          <br>
+        
+
+        <span class="text">
+          <p><b>Final Decision: </b></p>
+          <p>I decided on <b>Wordle</b> as Black Jack seemed too inappropriate for a school project, and Wordle provided a more appealing challenge to me compared to a simpler project such as Rock Paper Scissors.</p>
+          <p>After researching existing solutions. I found many like-minded, computer scientist, problem solvers who all had their own ideas and suggestions to find the optimal first guess and Wordle Simulations.</p>
+      
+          <br>
+          <br>
+          <p>I obtained the official list of possible guesses and answers on Github. The list of possible guesses is around 11000 words and the list of possible answers is around 2500 words.</p>
+          <p>With this information, I was confident I could create the <b>singleplayer</b> and <b>multiplayer</b> mode without any major problems.</p>
+          <p>I first found the occurance of letters in these words. After seeing the 5 most common letters were e,a,r,o,t and furthermore e was the most common letter in the 5th position and a the most common 3rd, I decided on "roate" to be the best starting word. </p>
+          <img src="Occurance graphs.png"
+             style="object-fit:cover;
+              width: 100%;
+              height:100%;
+              border: solid 5px gray">
+          <br>
+          <br>
+          <p>I've played a lot of online multiplayer games and a common method to join the "same game" as your friend. Is by using a unique game code. I decided that this would be an appropriate method for my game.</p>
+          <br>
+          <br>
+          <p>The next part was the one which intrigued me the most. This was creating the <b>bot/simulation</b> to guess the best word each time and get the answer in the least amount of guesses possible.</p>
+          <p>Of the varying solutions I found online, many contained code too complicated for me to understand, but the ideas demonstrated in them were crucial to my understanding in creating my own Wordle simulation.</p>
+          <p>I stumbled across an idea in information theory called <b>entropy,</b> and this term was originally coined by <b> John Von Neumann!</b> Who I was familiar with through the school curriculum.</p>
+        
+          <p>One approach using entropy is by assigning a value to each letter on how likely it is to occur in a word based on the number of occurences in the possible answers.</p>
+          <p>Another approach to creating a guessing bot is to work backwards from the possible answers and see which ones CANNOT be possible. So you're left with the possible guesses.</p>
+          <p>Based on my <b>research,</b> I decided to use a mix of both of these approaches for my Wordle bot. </p>
+          <br>
+          <br>
+          <p>My objectives for this project are to create a working <b>singleplayer and multiplayer mode</b> as well as a functioning Wordle bot which will be the <b>computer simulation.</b></p>
+          <p>I intend to find the difference in ability between a <b>user</b> and my <b>computer simulation.</b> I also intend to create a "what if" scenario.</p>
+      
+
+      </div>
+
+    </div>
+
+
+
+
+<script>
+var textSize = 20;
+var text = document.querySelector('.text');
+var increase = document.querySelector('.increase');
+var decrease = document.querySelector('.decrease');
+
+
+// This selects all elements with the class text
+var myText = document.querySelectorAll(".text");
+// for increase
+increase.addEventListener("click", () => {
+  textSize = textSize + 2.5;
+  myText.forEach((element) => {
+    element.style.fontSize = textSize + "px";
+  });
+});
+
+// for decrease
+decrease.addEventListener("click", () => {
+  textSize = textSize - 2.5;
+  myText.forEach((element) => {
+    element.style.fontSize = textSize + "px";
+  });
+});
+
+
+
+
+
+</script>
+
+
+<style>
+
+.text{
+font-size: 25px;
+text-shadow: 0px 0px #000000;
+word-spacing: 6px;
+}
+
+
+.title{
+font-size: 60px;
+font-family: 'Lato', sans-serif;
+color: #f4e6ae;
+display: flex;
+justify-content: center;
+text-shadow:
+        0.07em 0 black,
+        0 0.07em black,
+        -0.07em 0 black,
+        0 -0.07em black;
+}
+
+.btn {
+border: 5px solid gray;
+font-family: 'Lato';
+font-size: inherit;
+color: inherit;
+background: none;
+cursor: pointer;
+padding: 25px 80px;
+display: inline-block;
+margin: 15px 30px;
+text-transform: uppercase;
+letter-spacing: 1px;
+font-weight: 700;
+outline: none;
+position: relative;
+-webkit-transition: all 0.3s;
+-moz-transition: all 0.3s;
+transition: all 0.3s;
+position:relative; left:80px; top:250px;
+
+
+}
+
+.btn:after {
+content: '';
+position: absolute;
+z-index: -1;
+-webkit-transition: all 0.3s;
+-moz-transition: all 0.3s;
+transition: all 0.3s;
+
+}
+
+
+
+
+
+/* Button 1 */
+.btn-1 {
+background: #6ca965;
+color: #fff;
+
+}
+
+.btn-1:hover {
+background: #5d9258;
+}
+
+.btn-1:active {
+background: #5d9258;
+top:260px;
+}
+
+.btn-1:before {
+position: absolute;
+height: 100%;
+left: 0;
+top: 0;
+line-height: 3;
+font-size: 140%;
+width: 204px;
+}
+
+/* Button 2 */
+.btn-2 {
+background: #c8b653;
+color: #fff;
+}
+
+.btn-2:hover {
+background: #b3a34b;
+}
+
+.btn-2:active {
+background: #b3a34b;
+top:260px;
+}
+
+.btn-2:before {
+position: absolute;
+height: 100%;
+left: 0;
+top: 0;
+line-height: 3;
+font-size: 140%;
+width: 60px;
+}
+</style>
+    
+</body>
+
+
+
+<style>
+  body {
+    background-image: url('python.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+</style>  
+
+
+ 
+</body>
+</html>

@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="js_dropdown.js"></script> 
+<script src="navbar_shrink.js"></script> 
+<link rel="stylesheet" href="css_dropdown.css" />   
+<title>Implementation</title>
+<link rel="icon" href="favicon_green.png">
+
+</head>
+<body>
+
+<div id="myNav" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <div class="overlay-content">
+    <a href="index.html">Home page</a>
+    <a href="brief.html">Meeting the Brief</a>
+    <a href="investigation.html">Investigation and Plan</a>
+    <a href="design.html">Design</a>
+    <a href="implementation.html">Implementation</a>
+    <a href="testing.html">Testing</a>
+    <a href="evaluation.html">Evaluation</a>
+    <a href="references.html">References</a>
+    <a href="wordcount.html">Summary Word Count</a>
+  </div>
+</div>
+
+<br>
+
+
+<body>
+
+  <header>
+    <center>
+        <div id="navbar">
+    
+            <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Navigation Drop Down</span>
+        </div>
+    </center>
+  </header>
+    
+    
+    <style>
+    #navbar {
+      overflow: hidden;
+      background-color: #f1f1f173;
+      padding: 90px 10px; /* Large padding which will shrink on scroll (using JS) */
+      transition: 0.4s; /* Adds a transition effect when the padding is decreased */
+      position: fixed; /* Sticky/fixed navbar */
+      width: 100%;
+      top: 0; /* At the top */
+      z-index: 99;
+      text-shadow: 2px 2px #000000;
+    }
+    
+    </style>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<button class="increase btn btn-1 btn-sep icon-info">Increase Font Size</button>
+<button class="decrease btn btn-2 btn-sep icon-info">Decrease Font Size</button>
+
+
+    <div style="margin-top:210px;padding:15px 15px 2500px;background-color: #83a380ec;border: 5px solid gray;color: white;">
+
+
+      <br>
+      <br>
+      <br>
+      <br>
+      <span class="text">
+      <p>I've outlined a clear description of how the system was <b>implemented</b> below.</p>
+    </span>
+      <div>
+        <img src="thumbnail_plan pt 1.png"
+        style="object-fit:cover;
+          width: 100%;
+          height:100%;">
+      </div>
+      <div>
+        <img src="thumbnail_plan pt 2.png"
+        style="object-fit:cover;
+          width: 100%;
+          height:100%;">
+      </div>
+      <br>
+      <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <span class="title"> Implementation </span>
+          <span class="text">
+            <p><b>Below is a function that's used in the wordle simulation, to find the next guess. In this part of the code, it's finding the possible words when a "Yellow Letter" Occurs.</b></p>
+            <p>The letter and the position it occured in, are the parameters needed for this function.</p>
+            <p>Because it's a yellow letter, the words containing this letter can be a possible answer. But not in the same position it occured in, because if a yellow letter was in the same position as the letter in the final answer, it would be a green letter.</p>
+            <br>
+          </span>
+          
+          
+          
+          
+          <div class="center">
+            <img src="code explained green text.png"
+            style="object-fit:cover;
+                width: 130%;
+                height:130%;
+              border: solid 5px gray">
+          </div>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <span class="text">
+            <p><b>And this is a function to find the possible words the answer can be that do NOT contain a certain letter.</b></p>
+            <p>This is used when a "Grey Letter" occurs</p>
+          </span>
+          <div class="center">
+            <img src="code ex green text.png"
+            style="object-fit:cover;
+                width: 130%;
+                height:130%;
+              border: solid 5px gray">
+          </div>
+          <br>
+  
+          <br>
+          <span class="text">
+            <p><b>These functions, as well as one for "Green Letters" are used in unison and accordingly, depending on what colour the computer gives each letter in a guess.</b></p>
+            <p>Afterwards, an intersection is found between all 5 lists</p>
+            <p>A random word is chosen from this list for the next guess and the process repeats, this time slimming down the list of possible answers from the previous intersection.</p>
+            <p>This ensures the list of possible answers gets smaller and smaller and eventually it can only be one.</p>   
+            <p>This simulation was very important in the development of my project as it allowed me to create a model to test hypotheses, and could be modified easily for my "What If" Scenario, where ONLY "Green Letters" and "Grey Letters" were given as feedback to make it more challenging for the computer and the user.</p>  
+            <div class="center">
+              <img src="Graphs.png"
+              style="object-fit:cover;
+                  width: 150%;
+                  height:150%;
+                border: solid 5px gray">
+            </div>
+            <p>The colours in this graph are only stylstic. These graphs are subject to change as they take inputs from the Firebase which data is constantly added to the more people play.</p>
+          </span>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <span class="text">
+            <p><b>One problem I encountered during the development of my project was deriving an optimal first guess.</b> The most optimal first guess is the one that gives the user or the simulation the most relevant data back. For example, the word “Booze” is a bad first guess as it contains 2 o’s and an uncommon letter “z”. A better first guess is one that contains 5 unique letters that have the most likelihood of appearing in the answer. I didn’t know where to start at first but after brainstorming I decided on analysing the occurrences of letters in the possible wordle answers.  </p>
+            <p>I also applied decomposition to help form my solution, the first part of the problem to tackle was reading in the list of answers, then I had to use a for loop to sort through the letters in each word. Once I had a function created for this, I changed the range in the function to a parameter which allowed me to check the occurances of a letter in any position of the word.</p>
+            <div>
+            <img src="Occurance graphs.png"
+             style="object-fit:cover;
+              width: 100%;
+              height:100%;
+              border: solid 5px gray">
+            </div>
+            <div>
+              <img src="letter occuyrances code.JPG"
+               style="object-fit:cover;
+                width: 100%;
+                height:100%;
+                ">
+              </div>
+            
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              
+          </span>
+
+
+    </div>
+
+
+
+<script>
+var textSize = 20;
+var text = document.querySelector('.text');
+var increase = document.querySelector('.increase');
+var decrease = document.querySelector('.decrease');
+
+
+// This selects all elements with the class text
+var myText = document.querySelectorAll(".text");
+// for increase
+increase.addEventListener("click", () => {
+  textSize = textSize + 2.5;
+  myText.forEach((element) => {
+    element.style.fontSize = textSize + "px";
+  });
+});
+
+// for decrease
+decrease.addEventListener("click", () => {
+  textSize = textSize - 2.5;
+  myText.forEach((element) => {
+    element.style.fontSize = textSize + "px";
+  });
+});
+
+
+
+
+
+</script>
+
+
+<style>
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: 40%;
+  width: 50%;
+}
+.text{
+font-size: 25px;
+word-spacing: 6px;
+}
+
+
+.title{
+font-size: 60px;
+font-family: 'Lato', sans-serif;
+color: #f4e6ae;
+display: flex;
+justify-content: center;
+text-shadow:
+        0.07em 0 black,
+        0 0.07em black,
+        -0.07em 0 black,
+        0 -0.07em black;
+}
+
+.btn {
+border: 5px solid gray;
+font-family: 'Lato';
+font-size: inherit;
+color: inherit;
+background: none;
+cursor: pointer;
+padding: 25px 80px;
+display: inline-block;
+margin: 15px 30px;
+text-transform: uppercase;
+letter-spacing: 1px;
+font-weight: 700;
+outline: none;
+position: relative;
+-webkit-transition: all 0.3s;
+-moz-transition: all 0.3s;
+transition: all 0.3s;
+position:relative; left:80px; top:250px;
+
+
+}
+
+.btn:after {
+content: '';
+position: absolute;
+z-index: -1;
+-webkit-transition: all 0.3s;
+-moz-transition: all 0.3s;
+transition: all 0.3s;
+
+}
+
+
+
+
+
+/* Button 1 */
+.btn-1 {
+background: #6ca965;
+color: #fff;
+
+}
+
+.btn-1:hover {
+background: #5d9258;
+}
+
+.btn-1:active {
+background: #5d9258;
+top:260px;
+}
+
+.btn-1:before {
+position: absolute;
+height: 100%;
+left: 0;
+top: 0;
+line-height: 3;
+font-size: 140%;
+width: 204px;
+}
+
+/* Button 2 */
+.btn-2 {
+background: #c8b653;
+color: #fff;
+}
+
+.btn-2:hover {
+background: #b3a34b;
+}
+
+.btn-2:active {
+background: #b3a34b;
+top:260px;
+}
+
+.btn-2:before {
+position: absolute;
+height: 100%;
+left: 0;
+top: 0;
+line-height: 3;
+font-size: 140%;
+width: 60px;
+}
+</style>
+    
+</body>
+
+
+
+<style>
+  body {
+    background-image: url('python.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+</style>  
+
+
+ 
+</body>
+</html>

@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="js_dropdown.js"></script> 
+<script src="navbar_shrink.js"></script> 
+<link rel="stylesheet" href="css_dropdown.css" />  
+<title>References</title>
+<link rel="icon" href="favicon_green.png">
+
+</head>
+<body>
+
+<div id="myNav" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <div class="overlay-content">
+    <a href="index.html">Home page</a>
+    <a href="brief.html">Meeting the Brief</a>
+    <a href="investigation.html">Investigation and Plan</a>
+    <a href="design.html">Design</a>
+    <a href="implementation.html">Implementation</a>
+    <a href="testing.html">Testing</a>
+    <a href="evaluation.html">Evaluation</a>
+    <a href="references.html">References</a>
+    <a href="wordcount.html">Summary Word Count</a>
+  </div>
+</div>
+
+<br>
+
+
+<body>
+
+  <header>
+    <center>
+        <div id="navbar">
+    
+            <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Navigation Drop Down</span>
+        </div>
+    </center>
+  </header>
+    
+    
+    <style>
+    #navbar {
+      overflow: hidden;
+      background-color: #f1f1f173;
+      padding: 90px 10px; /* Large padding which will shrink on scroll (using JS) */
+      transition: 0.4s; /* Adds a transition effect when the padding is decreased */
+      position: fixed; /* Sticky/fixed navbar */
+      width: 100%;
+      top: 0; /* At the top */
+      z-index: 99;
+      text-shadow: 2px 2px #000000;
+    }
+    
+    </style>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<button class="increase btn btn-1 btn-sep icon-info">Increase Font Size</button>
+<button class="decrease btn btn-2 btn-sep icon-info">Decrease Font Size</button>
+
+
+    <div style="margin-top:210px;padding:15px 15px 2500px;background-color: #83a380e8;border: 5px solid gray;color: white;">
+
+
+
+    
+          <br>
+          <br>
+          <br>
+          <br>
+          <span class="title"> References </span>
+          <span class="text">
+          <p><b>References Used in the Creation of The Website</b></p>
+          <p>https://unsplash.com/photos/ieic5Tq8YMk 
+            <br>
+            https://sebhastian.com/css-center-image-div/ 
+            <br>
+            https://www.tutorialbrain.com/css_tutorial/css_font_family_list/ 
+            <br>
+            https://helpdeskgeek.com/how-to/image-text-wrap-css-html/ 
+            <br>
+            https://www.w3.org/TR/WCAG20-TECHS/C8.html 
+            <br>
+            https://smallbusiness.chron.com/put-drop-shadow-behind-text-illustrator-67801.html 
+            <br>
+            https://stackoverflow.com/questions/23968961/css-how-can-i-make-a-font-readable-over-any-color 
+            <br>
+            https://dev.to/webdeasy/top-20-css-buttons-animations-f41 
+            <br>
+            https://unsplash.com/photos/ieic5Tq8YMk 
+            <br>
+            https://stackoverflow.com/questions/2570972/css-font-border 
+            <br>
+            https://www.quora.com/How-do-I-change-color-of-one-letter-in-a-h1-tag 
+            <br>
+            https://www.youtube.com/watch?v=4rAJZ0N8Vdk 
+            <br>
+            https://www.w3schools.com/css/tryit.asp?filename=trycss_boxmodel_width 
+            <br>
+            https://www.w3schools.com/css/css3_buttons.asp 
+            <br>
+            https://www.w3schools.com/howto/howto_js_fullscreen_overlay.asp 
+            <br>
+            https://www.w3schools.com/css/css_grid_container.asp 
+            <br>
+            https://www.w3schools.com/howto/howto_js_navbar_shrink_scroll.asp 
+            <br>
+            <br>
+            <br>
+             
+            
+             
+          <p><b>References Used in the Creation of my Artefact</b></p>  
+            https://matplotlib.org/stable/tutorials/colors/colors.html      How to use different colours in graphs
+            <br>
+            <br>
+            <br>
+            https://gist.github.com/cfreshman/a03ef2cba789d8cf00c08f767e0fad7b     Worlde List of possible answers     
+            <br>
+            <br>
+            <br>
+            https://gist.github.com/cfreshman/cdcdf777450c5b5301e439061d29694c      Wordle List of possible guesses
+            <br>
+            <br>
+            <br>
+            https://stackoverflow.com/questions/29845051/remove-unique-values-from-a-list-and-keep-only-duplicates     How to remove duplicates in a list</p> 
+            <br>
+            <br>
+            <br>
+          </span>
+          
+            
+        
+          <br>
+          <br>
+        
+
+    </div>
+
+
+
+<script>
+var textSize = 20;
+var text = document.querySelector('.text');
+var increase = document.querySelector('.increase');
+var decrease = document.querySelector('.decrease');
+
+
+// This selects all elements with the class text
+var myText = document.querySelectorAll(".text");
+// for increase
+increase.addEventListener("click", () => {
+  textSize = textSize + 2.5;
+  myText.forEach((element) => {
+    element.style.fontSize = textSize + "px";
+  });
+});
+
+// for decrease
+decrease.addEventListener("click", () => {
+  textSize = textSize - 2.5;
+  myText.forEach((element) => {
+    element.style.fontSize = textSize + "px";
+  });
+});
+
+
+
+
+
+</script>
+
+
+<style>
+
+.text{
+font-size: 25px;
+text-shadow: 0px 0px #000000;
+word-spacing: 6px;
+}
+
+
+.title{
+font-size: 60px;
+font-family: 'Lato', sans-serif;
+color: #f4e6ae;
+display: flex;
+justify-content: center;
+text-shadow:
+        0.07em 0 black,
+        0 0.07em black,
+        -0.07em 0 black,
+        0 -0.07em black;
+}
+
+.btn {
+border: 5px solid gray;
+font-family: 'Lato';
+font-size: inherit;
+color: inherit;
+background: none;
+cursor: pointer;
+padding: 25px 80px;
+display: inline-block;
+margin: 15px 30px;
+text-transform: uppercase;
+letter-spacing: 1px;
+font-weight: 700;
+outline: none;
+position: relative;
+-webkit-transition: all 0.3s;
+-moz-transition: all 0.3s;
+transition: all 0.3s;
+position:relative; left:80px; top:250px;
+
+
+}
+
+.btn:after {
+content: '';
+position: absolute;
+z-index: -1;
+-webkit-transition: all 0.3s;
+-moz-transition: all 0.3s;
+transition: all 0.3s;
+
+}
+
+
+
+
+
+/* Button 1 */
+.btn-1 {
+background: #6ca965;
+color: #fff;
+
+}
+
+.btn-1:hover {
+background: #5d9258;
+}
+
+.btn-1:active {
+background: #5d9258;
+top:260px;
+}
+
+.btn-1:before {
+position: absolute;
+height: 100%;
+left: 0;
+top: 0;
+line-height: 3;
+font-size: 140%;
+width: 204px;
+}
+
+/* Button 2 */
+.btn-2 {
+background: #c8b653;
+color: #fff;
+}
+
+.btn-2:hover {
+background: #b3a34b;
+}
+
+.btn-2:active {
+background: #b3a34b;
+top:260px;
+}
+
+.btn-2:before {
+position: absolute;
+height: 100%;
+left: 0;
+top: 0;
+line-height: 3;
+font-size: 140%;
+width: 60px;
+}
+</style>
+    
+</body>
+
+
+
+<style>
+  body {
+    background-image: url('python.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+</style>  
+
+
+ 
+</body>
+</html>

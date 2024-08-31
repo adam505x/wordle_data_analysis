@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="js_dropdown.js"></script> 
+<script src="navbar_shrink.js"></script> 
+<link rel="stylesheet" href="css_dropdown.css" />
+<title>Testing</title>   
+<link rel="icon" href="favicon_green.png">
+</head>
+<body>
+
+<div id="myNav" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <div class="overlay-content">
+    <a href="index.html">Home page</a>
+    <a href="brief.html">Meeting the Brief</a>
+    <a href="investigation.html">Investigation and Plan</a>
+    <a href="design.html">Design</a>
+    <a href="implementation.html">Implementation</a>
+    <a href="testing.html">Testing</a>
+    <a href="evaluation.html">Evaluation</a>
+    <a href="references.html">References</a>
+    <a href="wordcount.html">Summary Word Count</a>
+  </div>
+</div>
+
+<br>
+
+
+<body>
+
+  <header>
+    <center>
+        <div id="navbar">
+    
+            <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Navigation Drop Down</span>
+        </div>
+    </center>
+  </header>
+    
+    
+    <style>
+    #navbar {
+      overflow: hidden;
+      background-color: #f1f1f173;
+      padding: 90px 10px; /* Large padding which will shrink on scroll (using JS) */
+      transition: 0.4s; /* Adds a transition effect when the padding is decreased */
+      position: fixed; /* Sticky/fixed navbar */
+      width: 100%;
+      top: 0; /* At the top */
+      z-index: 99;
+      text-shadow: 2px 2px #000000;
+    }
+    
+    </style>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<button class="increase btn btn-1 btn-sep icon-info">Increase Font Size</button>
+<button class="decrease btn btn-2 btn-sep icon-info">Decrease Font Size</button>
+
+
+    <div style="margin-top:210px;padding:15px 15px 2500px;background-color: #83a380ec;border: 5px solid gray;color: white;">
+
+
+    
+          <br>
+          <br>
+          <br>
+          <br>
+          <span class="title"> Summary Word Count </span>
+          <span class="text">
+            <p><b>Summary Word Count</b></p>
+            <table>
+              <tr>
+                <th>Section</th>
+                <th>Word Count</th>
+
+              </tr>
+              <tr>
+                <td>Meeting the Brief</td>
+                <td>206</td>
+                
+              </tr>
+              <tr>
+                <td>Investigation and Plan</td>
+                <td>464</td>
+                
+              </tr>
+              <tr>
+                <td>Design</td>
+                <td>497</td>
+
+              </tr>
+              <tr>
+                <td>Implementation</td>
+                <td>477</td>
+              </tr>
+              <tr>
+                <td>Testing</td>
+                <td>240</td>
+              </tr>
+              <tr>
+                <td>Evaluation</td>
+                <td>357</td>
+              </tr>
+              <tr>
+                <td>Total Word Count</td>
+                <td>2241</td>
+              </tr>
+            </table>
+            
+          </span>
+          
+            
+        
+          <br>
+          <br>
+          <br>
+        
+
+        
+
+
+    </div>
+
+
+
+<script>
+var textSize = 20;
+var text = document.querySelector('.text');
+var increase = document.querySelector('.increase');
+var decrease = document.querySelector('.decrease');
+
+
+// This selects all elements with the class text
+var myText = document.querySelectorAll(".text");
+// for increase
+increase.addEventListener("click", () => {
+  textSize = textSize + 2.5;
+  myText.forEach((element) => {
+    element.style.fontSize = textSize + "px";
+  });
+});
+
+// for decrease
+decrease.addEventListener("click", () => {
+  textSize = textSize - 2.5;
+  myText.forEach((element) => {
+    element.style.fontSize = textSize + "px";
+  });
+});
+
+
+
+
+
+</script>
+
+
+<style>
+  table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #DDD;
+}
+
+tr:hover {background-color: #00613296;}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: 40%;
+  width: 50%;
+}
+
+.text{
+font-size: 25px;
+word-spacing: 6px;
+}
+
+
+.title{
+font-size: 60px;
+font-family: 'Lato', sans-serif;
+color: #f4e6ae;
+display: flex;
+justify-content: center;
+text-shadow:
+        0.07em 0 black,
+        0 0.07em black,
+        -0.07em 0 black,
+        0 -0.07em black;
+}
+
+.btn {
+border: 5px solid gray;
+font-family: 'Lato';
+font-size: inherit;
+color: inherit;
+background: none;
+cursor: pointer;
+padding: 25px 80px;
+display: inline-block;
+margin: 15px 30px;
+text-transform: uppercase;
+letter-spacing: 1px;
+font-weight: 700;
+outline: none;
+position: relative;
+-webkit-transition: all 0.3s;
+-moz-transition: all 0.3s;
+transition: all 0.3s;
+position:relative; left:80px; top:250px;
+
+
+}
+
+.btn:after {
+content: '';
+position: absolute;
+z-index: -1;
+-webkit-transition: all 0.3s;
+-moz-transition: all 0.3s;
+transition: all 0.3s;
+
+}
+
+
+
+
+
+/* Button 1 */
+.btn-1 {
+background: #6ca965;
+color: #fff;
+
+}
+
+.btn-1:hover {
+background: #5d9258;
+}
+
+.btn-1:active {
+background: #5d9258;
+top:260px;
+}
+
+.btn-1:before {
+position: absolute;
+height: 100%;
+left: 0;
+top: 0;
+line-height: 3;
+font-size: 140%;
+width: 204px;
+}
+
+/* Button 2 */
+.btn-2 {
+background: #c8b653;
+color: #fff;
+}
+
+.btn-2:hover {
+background: #b3a34b;
+}
+
+.btn-2:active {
+background: #b3a34b;
+top:260px;
+}
+
+.btn-2:before {
+position: absolute;
+height: 100%;
+left: 0;
+top: 0;
+line-height: 3;
+font-size: 140%;
+width: 60px;
+}
+</style>
+    
+</body>
+
+
+
+<style>
+  body {
+    background-image: url('python.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+</style>  
+
+
+ 
+</body>
+</html>

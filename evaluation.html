@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="js_dropdown.js"></script> 
+<script src="navbar_shrink.js"></script> 
+<link rel="stylesheet" href="css_dropdown.css" />
+<title>Testing</title>   
+<link rel="icon" href="favicon_green.png">
+</head>
+<body>
+
+<div id="myNav" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <div class="overlay-content">
+    <a href="index.html">Home page</a>
+    <a href="brief.html">Meeting the Brief</a>
+    <a href="investigation.html">Investigation and Plan</a>
+    <a href="design.html">Design</a>
+    <a href="implementation.html">Implementation</a>
+    <a href="testing.html">Testing</a>
+    <a href="evaluation.html">Evaluation</a>
+    <a href="references.html">References</a>
+    <a href="wordcount.html">Summary Word Count</a>
+  </div>
+</div>
+
+<br>
+
+
+<body>
+
+  <header>
+    <center>
+        <div id="navbar">
+    
+            <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Navigation Drop Down</span>
+        </div>
+    </center>
+  </header>
+    
+    
+    <style>
+    #navbar {
+      overflow: hidden;
+      background-color: #f1f1f173;
+      padding: 90px 10px; /* Large padding which will shrink on scroll (using JS) */
+      transition: 0.4s; /* Adds a transition effect when the padding is decreased */
+      position: fixed; /* Sticky/fixed navbar */
+      width: 100%;
+      top: 0; /* At the top */
+      z-index: 99;
+      text-shadow: 2px 2px #000000;
+    }
+    
+    </style>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<button class="increase btn btn-1 btn-sep icon-info">Increase Font Size</button>
+<button class="decrease btn btn-2 btn-sep icon-info">Decrease Font Size</button>
+
+
+    <div style="margin-top:210px;padding:15px 15px 2500px;background-color: #83a380ec;border: 5px solid gray;color: white;">
+
+
+    
+          <br>
+          <br>
+          <br>
+          <br>
+          <span class="title"> Evaluation </span>
+          <span class="text">
+            <p><b>Evaluation</b></p>
+            <p>In evaluating my project in relation to my original objectives, I can see that I achieved everything I set out to do and I also hit every aspect of the brief. </p>
+            <p>My initial design was perhaps optimistic in regards to time constraints, for example, in my original plan of the simulation, I planned to narrow the list of guesses down using the three functions I've outlined earlier in this report and then I proposed to select a word from this list by analysing the letter frequency of each word. After consideration for time, I decided to leave this part out as it required a lot of work to only minimally reduce the average guess count of the simulation. In my final project, the simulation chooses a random word from the list of narrowed down possible guesses after it's reduced by the three functions.</p>
+            <p>I also decided not to perform statistical analysis on the multiplayer results as I deduced they would be similar to the single player results and thus not worth investigating especially since it is not a requirement of the brief as I already analysed the simulation and single player results.</p>
+            <br>
+            <br>
+            <br>
+            <br>
+            <div>
+              <img src="ud.png"
+              style="object-fit:cover;
+                width: 100%;
+                height:100%;">
+            </div>
+            <p>I also made use of universal design in my project. I used import time and time.sleep() to make the project easier to read and navigate. This stops an influx of text which can be daunting to read. I also ensured the rules were explained clearly and concisely to make it easier to understand and play</p>
+            <br>
+            <br>
+            <p><b>Further Iterations</b></p>
+            <p>If I were to further iterate this project, I would aim to implement the letter analysis feature to increase the simulation's accuracy. </p>
+            <p>I would also increase the size of the letter graphics which I believe would be feasible in pygame. When I showed the game to my family members some of them struggled to differentiate between the colours due to the size of the text.
+              A simple fix was to zoom in using the scroll wheel but it would be nice to have a better looking game. However neither of these are parts of the brief and I believe I still hit all objectives without these features.</p>
+          <div>
+              
+          </span>
+          
+            
+        
+          <br>
+          <br>
+          <br>
+        
+
+        
+
+
+    </div>
+
+
+
+<script>
+var textSize = 20;
+var text = document.querySelector('.text');
+var increase = document.querySelector('.increase');
+var decrease = document.querySelector('.decrease');
+
+
+// This selects all elements with the class text
+var myText = document.querySelectorAll(".text");
+// for increase
+increase.addEventListener("click", () => {
+  textSize = textSize + 2.5;
+  myText.forEach((element) => {
+    element.style.fontSize = textSize + "px";
+  });
+});
+
+// for decrease
+decrease.addEventListener("click", () => {
+  textSize = textSize - 2.5;
+  myText.forEach((element) => {
+    element.style.fontSize = textSize + "px";
+  });
+});
+
+
+
+
+
+</script>
+
+
+<style>
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: 40%;
+  width: 50%;
+}
+
+.text{
+font-size: 25px;
+word-spacing: 6px;
+}
+
+
+.title{
+font-size: 60px;
+font-family: 'Lato', sans-serif;
+color: #f4e6ae;
+display: flex;
+justify-content: center;
+text-shadow:
+        0.07em 0 black,
+        0 0.07em black,
+        -0.07em 0 black,
+        0 -0.07em black;
+}
+
+.btn {
+border: 5px solid gray;
+font-family: 'Lato';
+font-size: inherit;
+color: inherit;
+background: none;
+cursor: pointer;
+padding: 25px 80px;
+display: inline-block;
+margin: 15px 30px;
+text-transform: uppercase;
+letter-spacing: 1px;
+font-weight: 700;
+outline: none;
+position: relative;
+-webkit-transition: all 0.3s;
+-moz-transition: all 0.3s;
+transition: all 0.3s;
+position:relative; left:80px; top:250px;
+
+
+}
+
+.btn:after {
+content: '';
+position: absolute;
+z-index: -1;
+-webkit-transition: all 0.3s;
+-moz-transition: all 0.3s;
+transition: all 0.3s;
+
+}
+
+
+
+
+
+/* Button 1 */
+.btn-1 {
+background: #6ca965;
+color: #fff;
+
+}
+
+.btn-1:hover {
+background: #5d9258;
+}
+
+.btn-1:active {
+background: #5d9258;
+top:260px;
+}
+
+.btn-1:before {
+position: absolute;
+height: 100%;
+left: 0;
+top: 0;
+line-height: 3;
+font-size: 140%;
+width: 204px;
+}
+
+/* Button 2 */
+.btn-2 {
+background: #c8b653;
+color: #fff;
+}
+
+.btn-2:hover {
+background: #b3a34b;
+}
+
+.btn-2:active {
+background: #b3a34b;
+top:260px;
+}
+
+.btn-2:before {
+position: absolute;
+height: 100%;
+left: 0;
+top: 0;
+line-height: 3;
+font-size: 140%;
+width: 60px;
+}
+</style>
+    
+</body>
+
+
+
+<style>
+  body {
+    background-image: url('python.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+</style>  
+
+
+ 
+</body>
+</html>
